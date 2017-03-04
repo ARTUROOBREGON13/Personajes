@@ -2,11 +2,11 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>IndexServlet</servlet-name>
-        <servlet-class>Control.IndexServlet</servlet-class>
+        <servlet-class>Logica.IndexServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>PersonajeServlet</servlet-name>
-        <servlet-class>Control.PersonajeServlet</servlet-class>
+        <servlet-class>Logica.PersonajeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>IndexServlet</servlet-name>

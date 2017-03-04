@@ -1,18 +1,9 @@
-var tipoPj = ["Humano", "Enano", "Elfo", "Hechicero"];
-var tipoArma = ["Espada", "Arco", "Martillo", "Libro"];
-var tipoMontura = ["Caballo", "Jabali", "Lobo", "Glifo"];
-var tipoEscudo = ["Humano", "Enano", "Elfo", "Hechicero"];
-//plano();
-function dibujar() {
-    var tipo, arma, montura, armadura, escudo;
-    tipo = document.getElementById("tipoPj").value;
-    arma = document.getElementById("arma").value;
-    montura = document.getElementById("montura").value;
-    armadura = document.getElementById("armadura").value;
-    escudo = document.getElementById("escudo").value;
-    dibujarArma(arma);
-}
-
+var tipoPj = ["Elfo", "Enano", "Humano", "Hechicero"];
+var tipoArma = ["Arco", "Martillo", "Espada", "Libro"];
+var tipoArmadura = ["Armadura Ligera", "Armadura Pesada", "Cota de malla", "Tunica"];
+var tipoMontura = ["Lobo", "Jabali", "Caballo", "Glifo"];
+var tipoEscudo = ["Escudo Dorado", "Escudo de madera", "Escudo de Acero", "Escudo Etereo"];
+var seleccion = 0;
 function plano() {
     clave = document.getElementById("canvas");
     canvas = clave.getContext("2d");
@@ -34,51 +25,101 @@ function plano() {
     canvas.closePath();
 }
 
-function dibujarArma(i) {
-    if (i === 1)
+function dibujarArma() {
+
+    var tipo = seleccion;
+    if (tipo == 0)
         espada();
-    else if (i === 3)
+    else if (tipo == 1)
+        espada();
+    else if (tipo == 2)
+        arco();
+    else if (tipo == 3)
+        arco();
+}
+function dibujarEscudo() {
+    var tipo = seleccion;
+    if (tipo == 0)
+        espada();
+    else if (tipo == 1)
+        espada();
+    else if (tipo == 2)
+        arco();
+    else if (tipo == 3)
+        arco();
+}
+function dibujarMontura() {
+
+    var tipo = seleccion;
+    if (tipo == 0)
+        espada();
+    else if (tipo == 1)
+        espada();
+    else if (tipo == 2)
+        arco();
+    else if (tipo == 3)
+        arco();
+}
+function dibujarArmadura() {
+
+    var tipo = seleccion;
+    if (tipo == 1)
+        espada();
+    else if (tipo == 1)
+        espada();
+    else if (tipo == 1)
+        arco();
+    else if (tipo == 1)
         arco();
 }
 
+
 function espada() {
-    clave = document.getElementById("canvas");
-    canvas = clave.getContext("2d");
-    canvas.lineWidth = 2;
-    canvas.strokeStyle = "rgb(0, 0, 0)";
-
+    canvas.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.fillStyle = "#bbbbbb";
     canvas.beginPath();
-    canvas.arc(123, 100, 70, -3, (1 / 2) * Math.PI, true);
-    canvas.stroke();
-
+    canvas.moveTo(50, 110);
+    canvas.lineTo(100, 27);
+    canvas.lineTo(135, 111);
+    canvas.lineTo(114, 289);
+    canvas.lineTo(70, 289);
+    canvas.fill();
+    canvas.fillStyle = "#4b3621";
     canvas.beginPath();
-    canvas.arc(123, 169, 10, 0, 2 * Math.PI, true);
-    canvas.stroke();
-
-    canvas.moveTo(130, 170);
-    canvas.lineTo(169, 170);
-    canvas.stroke();
-    canvas.closePath();
+    canvas.moveTo(49, 287);
+    canvas.lineTo(140, 290);
+    canvas.lineTo(140, 330);
+    canvas.lineTo(117, 331);
+    canvas.lineTo(117, 402);
+    canvas.lineTo(82, 406);
+    canvas.lineTo(80, 330);
+    canvas.lineTo(55, 332);
+    canvas.fill();
 }
 
 
 function arco() {
+
     clave = document.getElementById("canvas");
     canvas = clave.getContext("2d");
     canvas.lineWidth = 2;
-    canvas.strokeStyle = "rgb(0, 0, 0)";
 
     canvas.beginPath();
-
-    canvas.arc(123, 100, 70, -3, (1 / 2) * Math.PI, true);
+    canvas.strokeStyle = "black";
+    canvas.arc(110, 150, 100, -0.5 * Math.PI, 0.5 * Math.PI);
+    canvas.moveTo(110, 240);
+    canvas.lineTo(110, 250);
+    canvas.arc(110, 150, 90, -0.5 * Math.PI, 0.5 * Math.PI);
+    canvas.moveTo(110, 60);
+    canvas.lineTo(110, 50);
     canvas.stroke();
 
     canvas.beginPath();
-    canvas.arc(123, 169, 10, 0, 2 * Math.PI, true);
+    canvas.moveTo(100, 150);
+    canvas.lineTo(220, 150);
+    canvas.moveTo(220, 155);
+    canvas.lineTo(220, 145);
+    canvas.lineTo(225, 150);
+    canvas.fill();
     canvas.stroke();
-
-    canvas.moveTo(130, 170);
-    canvas.lineTo(169, 170);
-    canvas.stroke();
-    canvas.closePath();
 }
