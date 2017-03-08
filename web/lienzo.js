@@ -76,7 +76,7 @@ function plano() {
     canvas.stroke();
     canvas.closePath();
 }
-
+//armas
 function espada() {
     clave = document.getElementById("canvas");
     canvas = clave.getContext("2d");
@@ -125,4 +125,396 @@ function arco() {
     canvas.lineTo(225, 150);
     canvas.fill();
     canvas.stroke();
+}
+
+
+function libro() {
+    clave = document.getElementById("canvas");
+    canvas = clave.getContext("2d");
+    canvas.fillStyle = "#bbbbbb";
+    canvas.beginPath(); //Pongo el lapiz
+    canvas.lineWidth = 1;
+    canvas.strokeStyle = "black";
+    //Curva superior
+    canvas.beginPath();
+    canvas.moveTo(40, 150);
+    canvas.bezierCurveTo(76, 125, 112, 125, 150, 150);
+    canvas.stroke();
+    canvas.moveTo(150, 150);
+    canvas.bezierCurveTo(186, 125, 222, 125, 260, 150);
+    canvas.stroke();
+    canvas.moveTo(40, 250);
+    canvas.bezierCurveTo(76, 225, 112, 225, 150, 250);
+    canvas.stroke();
+    canvas.moveTo(40, 250);
+    canvas.bezierCurveTo(76, 235, 112, 235, 150, 250);
+    canvas.stroke();
+    canvas.moveTo(40, 250);
+    canvas.bezierCurveTo(76, 245, 112, 245, 150, 250);
+    canvas.stroke();
+    canvas.moveTo(150, 250);
+    canvas.bezierCurveTo(186, 225, 222, 225, 260, 250);
+    canvas.stroke();
+    canvas.moveTo(150, 250);
+    canvas.bezierCurveTo(186, 235, 222, 235, 260, 250);
+    canvas.stroke();
+    canvas.moveTo(150, 250);
+    canvas.bezierCurveTo(186, 245, 222, 245, 260, 250);
+    canvas.stroke();
+
+    //linea izquierda
+    canvas.beginPath();
+    canvas.moveTo(40, 150);
+    canvas.lineTo(40, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+
+
+    canvas.beginPath();
+    canvas.moveTo(37, 150);
+    canvas.lineTo(37, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(34, 150);
+    canvas.lineTo(34, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    //linea central
+    canvas.beginPath();
+    canvas.moveTo(150, 150);
+    canvas.lineTo(150, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+
+    //linea derecha
+    canvas.beginPath();
+    canvas.moveTo(260, 150);
+    canvas.lineTo(260, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(263, 150);
+    canvas.lineTo(263, 250);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.beginPath();
+    canvas.moveTo(266, 150);
+    canvas.lineTo(266, 250);
+    canvas.stroke();
+    canvas.closePath();
+    var my_gradient = canvas.createLinearGradient(0, 0, 0, 170);
+
+    my_gradient.addColorStop(1, "red");
+    canvas.fillStyle = my_gradient;
+    canvas.fillRect(150, 150, 10, 115);
+}
+//escudos
+
+//monturas
+function caballo() {
+    clave = document.getElementById("canvas");
+    canvas = clave.getContext("2d");
+    canvas.beginPath(); //Pongo el lapiz
+    //cuerpo de arriba
+    canvas.beginPath();
+    canvas.moveTo(340, 150);
+    canvas.bezierCurveTo(350, 100, 500, 100, 550, 150);
+    canvas.stroke();
+    //cuerpo abajo
+    canvas.beginPath();
+    canvas.moveTo(340, 180);
+    canvas.bezierCurveTo(500, 220, 550, 200, 520, 150);
+    canvas.stroke();
+    colas = 50;
+    for (var i = 0; i < colas; i++) {
+        canvas.beginPath();
+        canvas.moveTo(345, 140);
+        canvas.lineTo(300 + i, 200);
+        canvas.stroke();
+        canvas.closePath();
+        i += 3;
+    }
+    //linea pierda tracera
+    canvas.beginPath();
+    canvas.moveTo(340, 150);
+    canvas.lineTo(340, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(380, 150);
+    canvas.lineTo(340, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(380, 190);
+    canvas.lineTo(380, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(400, 192);
+    canvas.lineTo(380, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //PATAS DELANTERAS
+    canvas.beginPath();
+    canvas.moveTo(480, 250);
+    canvas.lineTo(450, 190);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(485, 190);
+    canvas.lineTo(480, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //patica delantera
+    canvas.beginPath();
+    canvas.moveTo(500, 200);
+    canvas.lineTo(490, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //patica delantera
+    canvas.beginPath();
+    canvas.moveTo(488, 200);
+    canvas.lineTo(490, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    //cara
+    canvas.fillStyle = "#F5941D";
+    canvas.beginPath();
+    canvas.ellipse(555, 155, 30, 45, 55 * Math.PI / 100000000, 0, 2 * Math.PI);
+    canvas.stroke();
+
+    canvas.fillStyle = "black";
+    canvas.beginPath();
+    canvas.arc(580, 140, 10, 0, 2 * Math.PI);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.beginPath();
+    canvas.arc(570, 140, 10, 0, 2 * Math.PI);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.fillStyle = "black";
+    canvas.beginPath();
+    canvas.moveTo(550, 130);
+    canvas.lineTo(500, 80);
+    canvas.lineTo(520, 150);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.beginPath();
+    canvas.moveTo(580, 125);
+    canvas.lineTo(520, 80);
+    canvas.lineTo(530, 115);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+}
+
+function lobo() {
+    var canvas = document.getElementById('canvas');
+    var canvas = canvas.getContext('2d');
+    canvas.clearRect(0, 0, canvas.width, canvas.height);
+    canvas.beginPath(); //Pongo el lapiz
+    canvas.strokeStyle = "black";
+    //cuerpo de arriba
+    canvas.beginPath();
+    canvas.moveTo(340, 150);
+    canvas.bezierCurveTo(350, 100, 500, 100, 550, 150);
+    canvas.stroke();
+    //cuerpo abajo
+    canvas.beginPath();
+    canvas.moveTo(340, 180);
+    canvas.bezierCurveTo(500, 220, 550, 250, 550, 150);
+    canvas.stroke();
+
+    colas = 50;
+    for (var i = 0; i < colas; i++) {
+        //colas
+        canvas.beginPath();
+        canvas.moveTo(340, 150);
+        canvas.lineTo(300 + i, 200);
+        canvas.stroke();
+        canvas.closePath();
+
+        i += 2;
+    }
+    //linea pierda tracera
+    canvas.beginPath();
+    canvas.moveTo(340, 150);
+    canvas.lineTo(340, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(380, 190);
+    canvas.lineTo(340, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(380, 190);
+    canvas.lineTo(380, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(420, 200);
+    canvas.lineTo(380, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //PATAS DELANTERAS
+    canvas.beginPath();
+    canvas.moveTo(480, 250);
+    canvas.lineTo(450, 190);
+    canvas.stroke();
+    canvas.closePath();
+
+    canvas.beginPath();
+    canvas.moveTo(500, 190);
+    canvas.lineTo(480, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //patica delantera
+    canvas.beginPath();
+    canvas.moveTo(510, 215);
+    canvas.lineTo(490, 250);
+    canvas.stroke();
+    canvas.closePath();
+    //patica delantera
+    canvas.beginPath();
+    canvas.moveTo(488, 225);
+    canvas.lineTo(490, 250);
+    canvas.stroke();
+    canvas.closePath();
+
+    //cara
+    canvas.fillStyle = "#black";
+    canvas.beginPath();
+    canvas.arc(550, 150, 40, 0, 2 * Math.PI);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.fillStyle = "blue";
+    canvas.beginPath();
+    canvas.arc(580, 140, 10, 0, 2 * Math.PI);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.beginPath();
+    canvas.arc(570, 140, 10, 0, 2 * Math.PI);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.fillStyle = "black";
+    canvas.beginPath();
+    canvas.moveTo(550, 130);
+    canvas.lineTo(500, 80);
+    canvas.lineTo(520, 150);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+
+    canvas.beginPath();
+    canvas.moveTo(580, 125);
+    canvas.lineTo(520, 80);
+    canvas.lineTo(530, 115);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+}
+
+//armaduras
+function ArmaduraPesada() {
+    clave = document.getElementById("canvas");
+    canvas = clave.getContext("2d");
+    var my_gradient = canvas.createLinearGradient(600, 0, 600, 170);
+    my_gradient.addColorStop(0, "red");
+    my_gradient.addColorStop(1, "black");
+    canvas.fillStyle = my_gradient;
+    canvas.fillRect(730, 105, 70, 110);
+
+    var my_gradient = canvas.createLinearGradient(600, 0, 600, 170);
+    my_gradient.addColorStop(0, "black");
+    my_gradient.addColorStop(1, "white");
+    canvas.fillStyle = my_gradient;
+    // Triángulo rellenado
+    canvas.beginPath();
+    canvas.moveTo(800, 200);
+    canvas.lineTo(855, 200);
+    canvas.lineTo(800, 105);
+    canvas.fill();
+
+    // Triángulo contorneado
+    canvas.beginPath();
+    canvas.moveTo(730, 130);
+    canvas.lineTo(855, 130);
+    canvas.lineTo(730, 105);
+    canvas.fill();
+
+    var my_gradient = canvas.createLinearGradient(600, 0, 600, 170);
+    my_gradient.addColorStop(1, "black");
+    my_gradient.addColorStop(0, "red");
+    canvas.fillStyle = my_gradient;
+    canvas.fillRect(720, 220, 35, 15);
+    canvas.fillRect(770, 220, 35, 15);
+
+
+}
+
+function tunica() {
+    clave = document.getElementById("canvas");
+    canvas = clave.getContext("2d");
+    var gradient = canvas.createLinearGradient(600, 0, 600, 170);
+    gradient.addColorStop(1, "black");
+    gradient.addColorStop(0.8, "#00FFFF");
+    canvas.fillStyle = gradient;
+    canvas.beginPath();
+    canvas.moveTo(780, 150);
+    canvas.lineTo(750, 150);
+    canvas.lineTo(700, 250);
+    canvas.lineTo(850, 250);
+    canvas.stroke();
+    canvas.closePath();
+    canvas.fill();
+    var gradient = canvas.createLinearGradient(600, 0, 600, 170);
+    gradient.addColorStop(1, "black");
+    gradient.addColorStop(0, "#DAA520");
+    canvas.fillStyle = gradient;
+    canvas.fillRect(730, 105, 70, 110);
+
+    gradient.addColorStop(1, "black");
+    gradient.addColorStop(0, "#00FFFF");
+    canvas.fillStyle = gradient;
+    canvas.beginPath();
+    canvas.moveTo(800, 200);
+    canvas.lineTo(850, 200);
+    canvas.lineTo(800, 105);
+    canvas.fill();
+    canvas.beginPath();
+    canvas.moveTo(730, 130);
+    canvas.lineTo(855, 130);
+    canvas.lineTo(730, 105);
+    canvas.fill();
+
+    canvas.fillRect(730, 260, 35, 15);
+    canvas.fillRect(780, 260, 35, 15);
 }

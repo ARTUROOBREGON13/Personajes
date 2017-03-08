@@ -41,7 +41,7 @@ public class PersonajeServlet extends HttpServlet {
                 break;
 
         }
-        response.sendRedirect("/Personaje/Personaje.jsp?tipo=" + tipo);
+        response.sendRedirect("/Personaje/Index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

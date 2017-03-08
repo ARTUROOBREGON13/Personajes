@@ -31,7 +31,7 @@
     </head>
     <body  onload="capturar();">
         <div class="dibujo-canvas" aling="center">
-            <canvas id="canvas" width="300" height="300"></canvas>
+            <canvas id="canvas" width="1200" height="450"></canvas>
         </div>
         <input type="hidden" name="tipoPj" id="tipoPj"/>
         <table aling="center">

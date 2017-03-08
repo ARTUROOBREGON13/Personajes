@@ -30,8 +30,8 @@ and open the template in the editor.
                     <br> <select name="tipo" >
                         <option value="Elfo">Elfo</option>
                         <option value="Enano">Enano</option>
-                        <option value="Humano">Humano</option>
                         <option value="Hechicero">Hechicero</option>
+                        <option value="Humano">Humano</option>
                     </select> 
                     <input type="submit" value="Siguiente"/>
                 </form>
