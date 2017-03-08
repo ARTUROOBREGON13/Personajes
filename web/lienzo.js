@@ -1,4 +1,4 @@
-var tipoPj = ["Elfo", "Enano", "Humano", "Hechicero"];
+var tipoPj = ["Elfo", "Enano", "Hechicero", "Humano"];
 var tipoArma = ["Arco", "Martillo", "Espada", "Libro"];
 var tipoArmadura = ["Armadura Ligera", "Armadura Pesada", "Cota de malla", "Tunica"];
 var tipoMontura = ["Lobo", "Jabali", "Caballo", "Glifo"];
