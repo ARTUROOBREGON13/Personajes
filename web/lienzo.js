@@ -5,6 +5,31 @@ var tipoMontura = ["Lobo", "Jabali", "Caballo", "Glifo"];
 var tipoEscudo = ["Escudo Dorado", "Escudo de madera", "Escudo de Acero", "Escudo Etereo"];
 var seleccion = 0;
 
+function dibujar() {
+    var s = window.location.search;
+    s = s.split("=");
+    var aux= new Array(6);
+    for(i=0;i<s.length;i++)
+        aux[i]= s[i].toString().includes("true");
+    for (i = 0; i < tipoPj.length; i++) {
+        if (s[1] === tipoPj[i]) {
+            seleccion = i;
+        }
+    }
+    if (aux[2] === true) {
+        dibujarArma();
+    }
+    if (aux[3] === true) {
+        dibujarArmadura();
+    }
+    if (aux[4] === true) {
+        dibujarEscudo();
+    }
+    if (aux[5] === true) {
+        dibujarMontura();
+    }
+}
+
 function dibujarArma() {
 
     var tipo = seleccion;

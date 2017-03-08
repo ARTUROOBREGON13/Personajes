@@ -10,23 +10,19 @@ package Model;
  * @author usuario
  */
 public class Personaje {
+
     private ArmaAbs arma;
     private ArmaduraAbs armadura;
     private EscudoAbs escudo;
     private MonturaAbs montura;
     private String tipo;
-    
-    
-    public Personaje(){
-        
+
+    public Personaje() {
+
     }
 
-    public Personaje(String tipo, ArmaAbs arma, ArmaduraAbs armadura, EscudoAbs escudo, MonturaAbs montura) {
-        setTipo(tipo);
-        setArma(arma);
-        setArmadura(armadura);
-        setEscudo(escudo);
-        setMontura(montura);
+    public Personaje(String tipo) {
+        this.tipo = tipo;
     }
 
     /**
@@ -92,12 +88,4 @@ public class Personaje {
         return tipo;
     }
 
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-    
-    
 }

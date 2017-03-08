@@ -17,8 +17,7 @@ public class PersonajeServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ControlFabricas.setFabrica(null);
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/Personaje/index.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
