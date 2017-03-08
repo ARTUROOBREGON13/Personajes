@@ -4,6 +4,58 @@ var tipoArmadura = ["Armadura Ligera", "Armadura Pesada", "Cota de malla", "Tuni
 var tipoMontura = ["Lobo", "Jabali", "Caballo", "Glifo"];
 var tipoEscudo = ["Escudo Dorado", "Escudo de madera", "Escudo de Acero", "Escudo Etereo"];
 var seleccion = 0;
+
+function dibujarArma() {
+
+    var tipo = seleccion;
+    if (tipo === 0)
+        arco();
+    else if (tipo === 1)
+        martillo();
+    else if (tipo === 2)
+        libro();
+    else if (tipo === 3)
+        espada();
+}
+
+function dibujarEscudo() {
+    var tipo = seleccion;
+    if (tipo === 0)
+        escudoDorado();
+    else if (tipo === 1)
+        escudoRedondo();
+    else if (tipo === 2)
+        escudoEtereo();
+    else if (tipo === 3)
+        escudoAcero();
+}
+
+function dibujarMontura() {
+    var tipo = seleccion;
+    if (tipo === 0)
+        lobo();
+    else if (tipo === 1)
+        jabali();
+    else if (tipo === 2)
+        grifo();
+    else if (tipo === 3)
+        caballo();
+}
+
+function dibujarArmadura() {
+    var tipo = seleccion;
+    if (tipo === 0)
+        armaduraLigera();
+    else if (tipo === 1)
+        armaduraPesada();
+    else if (tipo === 2)
+        tunica();
+    else if (tipo === 3)
+        cotaDeMalla();
+}
+
+//funciones que utilizan el canvas
+
 function plano() {
     clave = document.getElementById("canvas");
     canvas = clave.getContext("2d");
@@ -25,57 +77,9 @@ function plano() {
     canvas.closePath();
 }
 
-function dibujarArma() {
-
-    var tipo = seleccion;
-    if (tipo == 0)
-        espada();
-    else if (tipo == 1)
-        espada();
-    else if (tipo == 2)
-        arco();
-    else if (tipo == 3)
-        arco();
-}
-function dibujarEscudo() {
-    var tipo = seleccion;
-    if (tipo == 0)
-        espada();
-    else if (tipo == 1)
-        espada();
-    else if (tipo == 2)
-        arco();
-    else if (tipo == 3)
-        arco();
-}
-function dibujarMontura() {
-
-    var tipo = seleccion;
-    if (tipo == 0)
-        espada();
-    else if (tipo == 1)
-        espada();
-    else if (tipo == 2)
-        arco();
-    else if (tipo == 3)
-        arco();
-}
-function dibujarArmadura() {
-
-    var tipo = seleccion;
-    if (tipo == 1)
-        espada();
-    else if (tipo == 1)
-        espada();
-    else if (tipo == 1)
-        arco();
-    else if (tipo == 1)
-        arco();
-}
-
-
 function espada() {
-    canvas.clearRect(0, 0, canvas.width, canvas.height);
+    clave = document.getElementById("canvas");
+    canvas = clave.getContext("2d");
     canvas.fillStyle = "#bbbbbb";
     canvas.beginPath();
     canvas.moveTo(50, 110);
@@ -96,7 +100,6 @@ function espada() {
     canvas.lineTo(55, 332);
     canvas.fill();
 }
-
 
 function arco() {
 
