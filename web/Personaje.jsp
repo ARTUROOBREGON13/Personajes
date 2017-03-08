@@ -11,7 +11,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Personaje</title>
-        <script src="lienzo.js"/>
+        <script src="lienzo.js"></script>
         <script lang="javascript">
             function capturar() {
                 var s = window.location.search;
