@@ -5,8 +5,8 @@
  */
 package Control;
 
-import Model.FabricaAbs;
-import Model.FabricaHumanos;
+import Logica.FabricaAbs;
+import Logica.FabricaHumanos;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
