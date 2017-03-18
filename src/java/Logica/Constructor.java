@@ -6,6 +6,7 @@
 package Logica;
 
 import Model.Personaje;
+import java.util.ArrayList;
 
 /**
  *
@@ -86,7 +87,7 @@ public class Constructor {
             }
         }
         if (rMontura) {
-            
+
             if (tipo == "Elfo") {
                 pj.setMontura(fabricaMonturas.crearLobo());
             } else if (tipo == "Enano") {
@@ -99,6 +100,19 @@ public class Constructor {
                 pj.setMontura(fabricaMonturas.crearCaballo());
             }
         }
+    }
+
+    public static ArrayList<Personaje> clonar(int n) {
+        ArrayList<Personaje> clonados;
+        if (getPj() != null) {
+            clonados = new ArrayList<Personaje>();
+            for (int i = 0; i < n; i++) {
+                clonados.add((Personaje) pj.clonar());
+            }
+        } else {
+            clonados = null;
+        }
+        return clonados;
     }
 
 }

@@ -5,10 +5,23 @@
  */
 package Model;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author konan
  */
-public abstract class CuerpoAbs {
-    
+public abstract class CuerpoAbs implements Clonable{
+    @Override
+    public Object clonar() {
+        try {
+            return this.getClass().newInstance();
+        } catch (InstantiationException ex) {
+            Logger.getLogger(ArmaduraAbs.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            Logger.getLogger(ArmaduraAbs.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 }

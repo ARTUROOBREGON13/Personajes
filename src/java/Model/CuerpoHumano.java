@@ -9,6 +9,6 @@ package Model;
  *
  * @author konan
  */
-public class Libro extends ArmaAbs{
-
+public class CuerpoHumano extends CuerpoAbs{
+    
 }
