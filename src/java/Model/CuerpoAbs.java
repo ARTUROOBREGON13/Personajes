@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  *
  * @author konan
  */
-public abstract class EscudoAbs implements Clonable{
+public abstract class CuerpoAbs implements Clonable{
     @Override
     public Object clonar() {
         try {

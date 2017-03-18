@@ -10,5 +10,5 @@ package Model;
  * @author konan
  */
 public class Martillo extends ArmaAbs{
-    
+  
 }
