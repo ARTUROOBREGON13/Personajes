@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Model/EscudoAbs.java</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Model/Caballo.java</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/web/lienzo.js</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/web/Personaje.jsp</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Model/ArmaduraHumano.java</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Logica/IndexServlet.java</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/web/index.jsp</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Control/PersonajeServlet.java</file>
-            <file>file:/home/konan/Downloads/Modelos111/Personajes/src/java/Control/IndexServlet.java</file>
+            <file>file:/home/konan/Documents/Modelos111/Personajes/web/index.jsp</file>
+            <file>file:/home/konan/Documents/Modelos111/Personajes/web/style.css</file>
+            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/FabricaHumanos.java</file>
+            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/IndexServlet.java</file>
+            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/FabricaHechiceros.java</file>
         </group>
     </open-files>
 </project-private>
