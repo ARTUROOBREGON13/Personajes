@@ -1,6 +1,12 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Logica;
 
 import Model.Personaje;
+
 /**
  *
  * @author usuario
@@ -30,5 +36,7 @@ public class ControlFabricas {
      */
     public static Personaje getPj() {
         return pj;
-    }       
+    }
+    
+    
 }

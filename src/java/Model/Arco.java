@@ -9,6 +9,10 @@ package Model;
  *
  * @author konan
  */
-public class Arco extends ArmaAbs{
-    
+public class Arco extends ArmaAbs {
+
+    public Arco() {
+        dano = 5;
+    }
+
 }

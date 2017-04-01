@@ -3,11 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/konan/Documents/Modelos111/Personajes/web/index.jsp</file>
-            <file>file:/home/konan/Documents/Modelos111/Personajes/web/style.css</file>
-            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/FabricaHumanos.java</file>
-            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/IndexServlet.java</file>
-            <file>file:/home/konan/Documents/Modelos111/Personajes/src/java/Logica/FabricaHechiceros.java</file>
+            <file>file:/C:/Users/R2D2/Documents/PersonajeBuilder/src/java/Model/Material.java</file>
+            <file>file:/C:/Users/R2D2/Documents/PersonajeBuilder/src/java/Model/ArmaAbs.java</file>
+            <file>file:/C:/Users/R2D2/Documents/PersonajeBuilder/src/java/Logica/FabricaArmas.java</file>
         </group>
     </open-files>
 </project-private>

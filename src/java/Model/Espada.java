@@ -10,5 +10,9 @@ package Model;
  * @author konan
  */
 public class Espada extends ArmaAbs{
-    
+
+    public Espada(){
+        dano = 10;
+    }
+   
 }

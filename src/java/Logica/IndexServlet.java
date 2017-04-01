@@ -32,30 +32,19 @@ public class IndexServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher rd = request.getRequestDispatcher("/Personaje.jsp");
-        String tipoPersonaje = request.getParameter("tipo");
-        request.setAttribute("tipoPj", tipoPersonaje);
-        crearFactoria(tipoPersonaje);
+        String tipo = request.getParameter("tipo");
+        request.setAttribute("tipoPj", tipo);
+        boolean arma, armadura, escudo, montura;
+        arma = request.getParameter("arma").equals("Si");
+        armadura = request.getParameter("armadura").equals("Si");
+        escudo = request.getParameter("escudo").equals("Si");
+        montura = request.getParameter("montura").equals("Si");
+        crearPj(tipo, arma, armadura, escudo, montura);
         rd.forward(request, response);
-        crearPj();
     }
 
-    private void crearFactoria(String tipo) {
-        FabricaAbs fabrica = null;
-        if (tipo.equals("Elfo")) {
-            fabrica = new FabricaElfos();
-        } else if (tipo.equals("Enano")) {
-            fabrica = new FabricaEnanos();
-        } else if (tipo.equals("Hechicero")) {
-            fabrica = new FabricaHechiceros();
-        } else if (tipo.equals("Humano")) {
-            fabrica = new FabricaHumanos();
-        }
-        ControlFabricas.setFabrica(fabrica);
-        
-    }
-
-    private void crearPj() {
-        ControlFabricas.crearPersonaje();
+    private void crearPj(String tipo, boolean rArma, boolean rArmadura, boolean rEscudo, boolean rMontura) {
+        Constructor.construirPersonaje(tipo,rArma,rArmadura,rEscudo,rMontura);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

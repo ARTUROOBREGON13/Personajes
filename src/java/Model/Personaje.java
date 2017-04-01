@@ -9,24 +9,28 @@ package Model;
  *
  * @author usuario
  */
-public class Personaje {
+public class Personaje implements Clonable {
+
     private ArmaAbs arma;
     private ArmaduraAbs armadura;
     private EscudoAbs escudo;
     private MonturaAbs montura;
     private String tipo;
     
-    
-    public Personaje(){
-        
-    }
 
     public Personaje(String tipo, ArmaAbs arma, ArmaduraAbs armadura, EscudoAbs escudo, MonturaAbs montura) {
-        setTipo(tipo);
-        setArma(arma);
-        setArmadura(armadura);
-        setEscudo(escudo);
-        setMontura(montura);
+        this.tipo = tipo;
+        this.arma = arma;
+        this.armadura = armadura;
+        this.escudo = escudo;
+        this.montura = montura;
+    }
+
+    public Personaje(String tipo) {
+        this.tipo = tipo;
+    }
+
+    private Personaje() {
     }
 
     /**
@@ -92,12 +96,21 @@ public class Personaje {
         return tipo;
     }
 
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    @Override
+    public Object clonar() {
+        Personaje clonado;
+        clonado = new Personaje();
+        clonado.tipo = tipo;
+        if(arma!=null)
+        clonado.arma = (ArmaAbs) arma.clonar();
+        if(armadura!=null)
+        clonado.armadura = (ArmaduraAbs) armadura.clonar();
+        if(escudo!=null)
+        clonado.escudo = (EscudoAbs) escudo.clonar();
+        if(montura!=null)
+        clonado.montura = (MonturaAbs) montura.clonar();
+
+        return clonado;
     }
-    
-    
+
 }

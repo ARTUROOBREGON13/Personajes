@@ -10,5 +10,9 @@ package Model;
  * @author konan
  */
 public class Martillo extends ArmaAbs{
-    
+
+    public Martillo() {
+        dano = 14;
+    }
+  
 }

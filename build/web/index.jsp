@@ -23,20 +23,44 @@ and open the template in the editor.
 
     <center>    
         <div><FONT COLOR=#FFFFFF>Bienvenido ^^</FONT></div>
-        <section text-align="center" >
-            <div aling="center">
-                <br> <FONT COLOR=#FFFFFF>Seleccione la clase de su personaje.</FONT>
-                <form id="tipoPersonaje" action="IndexServlet">
-                    <br> <select name="tipo" >
-                        <option value="Elfo">Elfo</option>
-                        <option value="Enano">Enano</option>
-                        <option value="Hechicero">Hechicero</option>
-                        <option value="Humano">Humano</option>
-                    </select> 
-                    <input type="submit" value="Siguiente"/>
-                </form>
-            </div>
-        </section>  
+        <form id="tipoPersonaje" action="IndexServlet">
+            <section text-align="center" >
+                <div aling="center">
+                    <br> 
+                    <table>
+                        <tr><td><FONT COLOR=#FFFFFF>Seleccione la clase de su personaje.</FONT></td></tr>
+                        <tr><td> <select name="tipo" >
+                                    <option value="Elfo">Elfo</option>
+                                    <option value="Enano">Enano</option>
+                                    <option value="Humano">Humano</option>
+                                    <option value="Hechicero">Hechicero</option>
+                                </select> 
+                            </td>
+                        </tr>
+                        <tr><td>¿Desea a su personaje con un arma?</td>
+                            <td><input type="radio" name="arma" value=true>Si</td>
+                            <td><input type="radio" name="arma" value=false>No</td>
+                        </tr>
+                        
+                        <tr><td>¿Desea a su personaje con una armadura?</td>
+                            <td><input type="radio" name="armadura" value=true>Si</td>
+                            <td><input type="radio" name="armadura" value=false>No</td>
+                        </tr>
+                        
+                        <tr><td>¿Desea a su personaje con un escudo?</td>
+                            <td><input type="radio" name="escudo" value=true>Si</td>
+                            <td><input type="radio" name="escudo" value=false>No</td>
+                        </tr>
+                        
+                        <tr><td>¿Desea a su personaje con una montura?</td>
+                            <td><input type="radio" name="montura" value=true>Si</td>
+                            <td><input type="radio" name="montura" value=false>No</td>
+                        </tr>
+                        <input type="submit" value="Siguiente"/>
+                    </table>
+                </div>
+            </section>  
+        </form>
 
     </center>
     <div  class="modal-footer">

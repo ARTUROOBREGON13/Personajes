@@ -6,6 +6,8 @@
 package Logica;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,8 +19,42 @@ public class PersonajeServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ControlFabricas.setFabrica(null);
-        response.sendRedirect("/index.jsp");
+        response.setContentType("text/html");
+        String accion = (String) request.getParameter("accion");
+        if (accion.equals("true")) {
+            int n = Integer.parseInt(request.getParameter("cantidad").toString());
+            Constructor.clonar(n);
+            PrintWriter out = response.getWriter();
+            String title = "Army";
+            out.println("<html>\n"
+                    + "<head><title>" + title + "</title>"
+                    + "<script> var n = +" + n + ";"
+                    + " function dibujarTodo(){\n"
+                    + "	clave = document.getElementById(\"canvas\");\n"
+                    + "    canvas = clave.getContext(\"2d\");\n"
+                    + "    canvas.lineWidth = 1;\n"
+                    + "    canvas.strokeStyle = '#000';\n"
+                    + "	var j=0,posX=6,posY=2;\n"
+                    + "	\n"
+                    + "	for(i=0;i<n;i++){\n"
+                    + "		j=1;\n"
+                    + "		posX*=i;\n"
+                    + "		while(posX>canvas.width){\n"
+                    + "			posX-=canvas.width;\n"
+                    + "			j++;\n"
+                    + "		}\n"
+                    + "		posY*=j;\n"
+                    + "		\n"
+                    + "		canvas.fillText(i+1,posX,posY);\n"
+                    + "	}\n"
+                    + "}</script> " + "</head>\n"
+                    + "<body onLoad=\"dibujarTodo()\">\n"
+                    + "<canvas id=\"canvas\" width=\"" + 12 * n + "\" height=\"" + 4 * n + "\"></canvas>"
+                    + "</body></html>");
+        }else{
+            RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+            rd.forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

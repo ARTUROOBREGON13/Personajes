@@ -1,9 +1,34 @@
-var tipoPj = ["Elfo", "Enano", "Hechicero", "Humano"];
+var tipoPj = ["Elfo", "Enano", "Humano", "Hechicero"];
 var tipoArma = ["Arco", "Martillo", "Espada", "Libro"];
 var tipoArmadura = ["Armadura Ligera", "Armadura Pesada", "Cota de malla", "Tunica"];
 var tipoMontura = ["Lobo", "Jabali", "Caballo", "Glifo"];
 var tipoEscudo = ["Escudo Dorado", "Escudo de madera", "Escudo de Acero", "Escudo Etereo"];
 var seleccion = 0;
+
+function dibujar() {
+    var s = window.location.search;
+    s = s.split("=");
+    var aux= new Array(6);
+    for(i=0;i<s.length;i++)
+        aux[i]= s[i].toString().includes("true");
+    for (i = 0; i < tipoPj.length; i++) {
+        if (s[1] === tipoPj[i]) {
+            seleccion = i;
+        }
+    }
+    if (aux[2] === true) {
+        dibujarArma();
+    }
+    if (aux[3] === true) {
+        dibujarArmadura();
+    }
+    if (aux[4] === true) {
+        dibujarEscudo();
+    }
+    if (aux[5] === true) {
+        dibujarMontura();
+    }
+}
 
 function dibujarArma() {
 
@@ -170,6 +195,7 @@ function libro() {
     canvas.closePath();
 
 
+
     canvas.beginPath();
     canvas.moveTo(37, 150);
     canvas.lineTo(37, 250);
@@ -188,7 +214,8 @@ function libro() {
     canvas.lineTo(150, 250);
     canvas.stroke();
     canvas.closePath();
-    
+
+
     //linea derecha
     canvas.beginPath();
     canvas.moveTo(260, 150);
@@ -210,7 +237,7 @@ function libro() {
 
     my_gradient.addColorStop(1, "red");
     canvas.fillStyle = my_gradient;
-    canvas.fillRect(150, 150, 7, 115);
+    canvas.fillRect(150, 150, 10, 115);
 }
 //escudos
 
@@ -477,46 +504,6 @@ function ArmaduraPesada() {
 
 
 }
-
-function caballo2(){
-    clave = document.getElementById("canvas");
-    canvas = clave.getContext("2d");
-    var gradient = canvas.createLinearGradient(600, 0, 600, 170);
-    gradient.addColorStop(1, "black");
-    gradient.addColorStop(0.8, "#C59939");
-    canvas.fillStyle = gradient;
-    canvas.beginPath();
-    canvas.moveTo(780, 150);
-    canvas.lineTo(750, 150);
-    canvas.lineTo(700, 250);
-    canvas.lineTo(850, 250);
-    canvas.stroke();
-    canvas.closePath();
-    canvas.fill();
-    var gradient = canvas.createLinearGradient(600, 0, 600, 170);
-    gradient.addColorStop(1, "black");
-    gradient.addColorStop(0, "#DAA520");
-    canvas.fillStyle = gradient;
-    canvas.fillRect(730, 105, 70, 110);
-
-    gradient.addColorStop(1, "black");
-    gradient.addColorStop(0, "#00FFFF");
-    canvas.fillStyle = gradient;
-    canvas.beginPath();
-    canvas.moveTo(800, 200);
-    canvas.lineTo(850, 200);
-    canvas.lineTo(800, 105);
-    canvas.fill();
-    canvas.beginPath();
-    canvas.moveTo(730, 130);
-    canvas.lineTo(855, 130);
-    canvas.lineTo(730, 105);
-    canvas.fill();
-
-    canvas.fillRect(730, 260, 35, 15);
-    canvas.fillRect(780, 260, 35, 15);
-}
-
 
 function tunica() {
     clave = document.getElementById("canvas");

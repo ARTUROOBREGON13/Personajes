@@ -9,6 +9,10 @@ package Model;
  *
  * @author konan
  */
-public class Libro extends ArmaAbs{
-    
+public class Libro extends ArmaAbs {
+
+    public Libro() {
+        dano = 15;
+    }
+
 }
