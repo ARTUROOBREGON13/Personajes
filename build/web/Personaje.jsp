@@ -7,7 +7,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <title>Personaje</title>
@@ -49,10 +48,10 @@
             </tr>
             <tr><td><p id="tipoEscudo"></p></td></tr>
             <tr>
-                <td><button id="escudo" onclick="dibujarEscudo()"> Crear Esucdo </button></td>
+                <td><button id="escudo" onclick="dibujarEscudo()"> Crear Escudo </button></td>
             </tr>
         </table>
-        <form id="formulario" action="PersonajeServlet" method="POST">
+        <form id="formulario" action="PersonajeServlet" >
             <button type="submit">Volver</button>
         </form>
     </body>

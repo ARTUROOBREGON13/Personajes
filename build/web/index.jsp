@@ -35,7 +35,6 @@
         <div  class="modal-footer">
             <a target="_blank" href="https://www.google.com/search?q=sao&client=ubuntu&hs=V9E&channel=fs&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiaupvd7KPSAhUKPiYKHVu-AuIQ_AUICCgB&biw=1366&bih=646"> Link del cual fue sacado la imagen </a>
         </div>
-    </footer>    
-    
+    </footer>        
 </body>
 </html>

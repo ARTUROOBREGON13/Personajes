@@ -102,7 +102,6 @@ function espada() {
 }
 
 function arco() {
-
     clave = document.getElementById("canvas");
     canvas = clave.getContext("2d");
     canvas.lineWidth = 2;
