@@ -35,11 +35,12 @@ public class IndexServlet extends HttpServlet {
         String tipoPersonaje = request.getParameter("tipo");
         request.setAttribute("tipoPj", tipoPersonaje);
         crearFactoria(tipoPersonaje);
+        System.out.println("Process Request");
         rd.forward(request, response);
         crearPj();
     }
 
-    private void crearFactoria(String tipo) {
+    private void crearFactoria(String tipo) {        
         FabricaAbs fabrica = null;
         if (tipo.equals("Elfo")) {
             fabrica = new FabricaElfos();

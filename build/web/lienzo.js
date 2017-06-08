@@ -44,6 +44,7 @@ function dibujarMontura() {
 
 function dibujarArmadura() {
     var tipo = seleccion;
+    
     if (tipo === 0)
         armaduraLigera();
     else if (tipo === 1)

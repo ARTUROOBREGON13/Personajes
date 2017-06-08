@@ -24,7 +24,7 @@
                     }
                 }
                 seleccion = s;
-            //    alert(seleccion); Comprobante del uso del metodo correctamente
+                alert(seleccion); Comprobante del uso del metodo correctamente
             }
         </script>
     </head>
@@ -34,21 +34,45 @@
         </div>
         <input type="hidden" name="tipoPj" id="tipoPj"/>
         <table aling="center">
-            <tr><td><p id="tipoArma" onload="javascript:dw('' + tipoArma[s])"></p></td></tr>
             <tr>
-                <td><button id="arma" onclick="dibujarArma()"> Crear Arma </button></td>
+                <td>
+                    <p id="tipoArma" onload="javascript:dw('' + tipoArma[s])"></p>
+                </td>
             </tr>
-            <tr><td><p id="tipoMontura"></p></td></tr>
             <tr>
-                <td><button id="montura" onclick="dibujarMontura()"> Crear Montura </button></td>
+                <td>
+                    <button id="arma" onclick="dibujarArma()"> Crear Arma </button>
+                </td>
             </tr>
-            <tr><td><p id="tipoArmadura"></p></td></tr>
             <tr>
-                <td><button id="armadura" onclick="dibujarArmadura()"> Crear Armadura </button></td>
+                <td>
+                    <p id="tipoMontura"></p>
+                </td>
             </tr>
-            <tr><td><p id="tipoEscudo"></p></td></tr>
             <tr>
-                <td><button id="escudo" onclick="dibujarEscudo()"> Crear Escudo </button></td>
+                <td>
+                    <button id="montura" onclick="dibujarMontura()"> Crear Montura </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="tipoArmadura"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="armadura" onclick="dibujarArmadura()"> Crear Armadura </button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p id="tipoEscudo"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="escudo" onclick="dibujarEscudo()"> Crear Escudo </button>
+                </td>
             </tr>
         </table>
         <form id="formulario" action="PersonajeServlet" >

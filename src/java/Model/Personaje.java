@@ -1,27 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
-/**
- *
- * @author usuario
- */
 public class Personaje {
+    
     private ArmaAbs arma;
     private ArmaduraAbs armadura;
     private EscudoAbs escudo;
     private MonturaAbs montura;
-    private String tipo;
-    
+    private String tipo;    
     
     public Personaje(){
         
     }
 
     public Personaje(String tipo, ArmaAbs arma, ArmaduraAbs armadura, EscudoAbs escudo, MonturaAbs montura) {
+        
         setTipo(tipo);
         setArma(arma);
         setArmadura(armadura);
@@ -98,6 +90,5 @@ public class Personaje {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
-    
+        
 }
