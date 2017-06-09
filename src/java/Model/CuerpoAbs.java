@@ -9,12 +9,6 @@ package Model;
  *
  * @author konan
  */
-public class Caballo extends MonturaAbs{
-
-    @Override
-    public MonturaAbs Clonar() {
-        MonturaAbs clon = new Caballo();
-        return clon;
-    }
+public abstract class CuerpoAbs {
     
 }

@@ -9,12 +9,11 @@ package Model;
  *
  * @author usuario
  */
-public class EscudoDorado extends EscudoAbs {
+public class EscudoEtereo extends EscudoAbs {
 
     @Override
     public EscudoAbs Clonar() {
-        EscudoAbs clon = new EscudoDorado();
+        EscudoAbs clon = new EscudoEtereo();
         return clon;
     }
-
 }

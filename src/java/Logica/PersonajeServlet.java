@@ -17,9 +17,16 @@ public class PersonajeServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        ControlFabricas.setFabrica(null);
-        response.sendRedirect("/index.jsp");
+        String metodo = request.getMethod();
+        if (metodo.equals("GET")) {
+            String cant = (String) request.getParameter("cantidad");
+            int cantidad = Integer.parseInt(cant);
+            Constructor.addTropas(cantidad);
+        }
+        response.sendRedirect("/Personaje/index.jsp");
+
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -58,4 +65,5 @@ public class PersonajeServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
 }

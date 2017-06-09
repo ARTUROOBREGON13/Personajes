@@ -1,24 +1,28 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Model;
 
-public class Personaje {
-    
+/**
+ *
+ * @author usuario
+ */
+public class Personaje implements Clonable {
+
     private ArmaAbs arma;
     private ArmaduraAbs armadura;
     private EscudoAbs escudo;
     private MonturaAbs montura;
-    private String tipo;    
-    
-    public Personaje(){
-        
+    private String tipo;
+
+    public Personaje() {
+
     }
 
-    public Personaje(String tipo, ArmaAbs arma, ArmaduraAbs armadura, EscudoAbs escudo, MonturaAbs montura) {
-        
-        setTipo(tipo);
-        setArma(arma);
-        setArmadura(armadura);
-        setEscudo(escudo);
-        setMontura(montura);
+    public Personaje(String tipo) {
+        this.tipo = tipo;
     }
 
     /**
@@ -84,11 +88,22 @@ public class Personaje {
         return tipo;
     }
 
-    /**
-     * @param tipo the tipo to set
-     */
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    @Override
+    public Personaje Clonar() {
+        Personaje clon = new Personaje(tipo);
+        if (arma != null) {
+            clon.setArma(arma.Clonar());
+        }
+        if (armadura != null) {
+            clon.setArmadura(armadura.Clonar());
+        }
+        if (escudo != null) {
+            clon.setEscudo(escudo.Clonar());
+        }
+        if (montura != null) {
+            clon.setMontura(montura.Clonar());
+        }
+        return clon;
     }
-        
+
 }

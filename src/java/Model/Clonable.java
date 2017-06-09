@@ -5,16 +5,6 @@
  */
 package Model;
 
-/**
- *
- * @author usuario
- */
-public class EscudoDorado extends EscudoAbs {
-
-    @Override
-    public EscudoAbs Clonar() {
-        EscudoAbs clon = new EscudoDorado();
-        return clon;
-    }
-
+public interface Clonable {
+    public Object Clonar();
 }
